@@ -69,7 +69,7 @@
                </children>
            </VBox>
        </center>
-       <bottom>
+       <!--<bottom>
            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearConsole" text="Очистить консоль">
             <padding>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -77,7 +77,7 @@
             <BorderPane.margin>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </BorderPane.margin></Button>
-       </bottom>
+       </bottom>-->
        <right>
            <!--<TextArea fx:id="console" editable="false" prefHeight="409.0" prefWidth="221.0" />-->
        </right>
