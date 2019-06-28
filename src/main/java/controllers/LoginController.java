@@ -23,16 +23,9 @@ public class LoginController {
 
     public static Stage quizStage = null;
 
-    // debug
-    public void initDebugVars(){
-        username.setText("range");
-        address.setText("localhost");
-        port.setText("8184");
-    }
-
     @FXML
     public void initialize(){
-        //initDebugVars();
+
     }
 
     public void login(ActionEvent actionEvent) {

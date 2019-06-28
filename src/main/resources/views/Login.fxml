@@ -9,8 +9,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fitToHeight="true" fitToWidth="true" minHeight="376.0" minWidth="336.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
-   <GridPane minHeight="350.0" minWidth="320.0" fx:id="testPane" styleClass="mainFxmlClass">
+<ScrollPane fitToHeight="true" fitToWidth="true" minHeight="376.0" minWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <GridPane minHeight="350.0" minWidth="320.0" fx:id="testPane" styleClass="mainFxmlClass" stylesheets="@../css/content.css">
    <columnConstraints>
          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" prefWidth="100.0" />
@@ -27,18 +27,18 @@
       <RowConstraints minHeight="10.0" percentHeight="12.5" prefHeight="30.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" text="UserName" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
+      <Label styleClass="title2" alignment="CENTER" contentDisplay="CENTER" text="Имя" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
       <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Label text="IP - Address" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Label styleClass="title2" text="IP - Address" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
       <TextField fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Label text="Port" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+      <Label styleClass="title2" text="Port" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
       <TextField fx:id="port" GridPane.columnIndex="1" GridPane.rowIndex="5" />
       <Label fx:id="error" text="Label" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" onAction="#login" text="Login" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+      <Button mnemonicParsing="false" onAction="#login" styleClass="btn" text="Login" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
    </children>
    </GridPane>
 </ScrollPane>

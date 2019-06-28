@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXRadioButton?>
-<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
-<?import de.jensd.fx.glyphs.octicons.OctIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.ScrollPane?>
@@ -17,7 +13,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane fx:id="parent" fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" minHeight="400.0" minWidth="600.0" stylesheets="@../css/content.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.JavaQuizController">
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Button?>
+<ScrollPane fx:id="parent" fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" minHeight="400.0" minWidth="600.0" stylesheets="@../css/content.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.JavaQuizController">
         <StackPane minHeight="400.0" minWidth="600.0" style="-fx-background-color: #FFF;" stylesheets="@../css/content.css">
             <children>
                 <GridPane fx:id="testPane" styleClass="mainFxmlClass" visible="false" BorderPane.alignment="CENTER">
@@ -42,10 +40,10 @@
                         <VBox maxWidth="-Infinity" spacing="20.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
                             <children>
                                 <Label styleClass="title2" text="Ответы:" />
-                                <JFXRadioButton fx:id="response1" onAction="#radioClicked" text=" " />
-                                <JFXRadioButton fx:id="response2" onAction="#radioClicked" text=" " />
-                                <JFXRadioButton fx:id="response3" onAction="#radioClicked" text=" " />
-                                <JFXRadioButton fx:id="response4" onAction="#radioClicked" text=" " />
+                                <RadioButton fx:id="response1" onAction="#radioClicked" text=" " />
+                                <RadioButton fx:id="response2" onAction="#radioClicked" text=" " />
+                                <RadioButton fx:id="response3" onAction="#radioClicked" text=" " />
+                                <RadioButton fx:id="response4" onAction="#radioClicked" text=" " />
                             </children>
                         </VBox>
                         <GridPane styleClass="mainFxmlClass" BorderPane.alignment="CENTER" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
@@ -60,16 +58,11 @@
                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <JFXButton onAction="#btnPrevious" styleClass="btn" text="Назад" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0">
-                                    <graphic>
-                                        <OctIconView glyphName="CHEVRON_LEFT" size="46" styleClass="icon" wrappingWidth="30.0" />
-                                    </graphic>
-                                </JFXButton>
-                                <JFXButton contentDisplay="RIGHT" onAction="#btnNext" styleClass="btn" text="Далее" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0">
-                                    <graphic>
-                                        <OctIconView glyphName="CHEVRON_RIGHT" size="50" styleClass="icon" wrappingWidth="30.0" />
-                                    </graphic>
-                                </JFXButton>
+                                <Button onAction="#btnPrevious" styleClass="btn" text="Назад" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0">
+                                </Button>
+                                <Button contentDisplay="RIGHT" onAction="#btnNext" styleClass="btn" text="Далее" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="0">
+
+                                </Button>
                             </children>
                         </GridPane>
                         <ProgressIndicator fx:id="progress" progress="0.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="0">
@@ -91,13 +84,12 @@
                         <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.valignment="BOTTOM">
                             <children>
                                 <Label styleClass="title" text="Вы завершили тестирование!" />
-                                <EmojiOneView size="32" styleClass="emoji" />
                             </children>
                         </HBox>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP">
                             <children>
-                                <JFXButton onAction="#btnViewResult" styleClass="btn-finished" text="Отправить результат" />
-                                <JFXButton onAction="#btnBackTest" styleClass="btn-finished" text="Вернуться к тесту" />
+                                <Button onAction="#btnViewResult" styleClass="btn-finished" text="Отправить результат" />
+                                <Button onAction="#btnBackTest" styleClass="btn-finished" text="Вернуться к тесту" />
                             </children>
                         </VBox>
                     </children>
@@ -114,7 +106,6 @@
                         <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.valignment="BOTTOM">
                             <children>
                                 <Label styleClass="title" text="Ваш результат!" />
-                                <EmojiOneView fx:id="emoji" size="32" styleClass="emoji" />
                             </children>
                         </HBox>
                         <VBox alignment="CENTER" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP">

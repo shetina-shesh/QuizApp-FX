@@ -10,16 +10,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.jfoenix:jfoenix:8.0.4" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: de.jensd:fontawesomefx-commons:8.15" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-controls:8.15" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-emojione:2.2.7-2" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-fontawesome:4.7.0-5" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-icons525:3.0.0-4" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-materialdesignfont:1.7.22-4" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-materialicons:2.2.0-5" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-octicons:4.3.0-5" level="project" />
-    <orderEntry type="library" name="Maven: de.jensd:fontawesomefx-weathericons:2.0.10-5" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.42" level="project" />
   </component>
 </module>

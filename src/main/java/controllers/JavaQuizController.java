@@ -1,8 +1,6 @@
 package controllers;
 
 import Server.Connection;
-import com.jfoenix.controls.JFXRadioButton;
-import de.jensd.fx.glyphs.emojione.EmojiOneView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -10,10 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressIndicator;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -57,7 +52,7 @@ public class JavaQuizController implements Initializable {
     private TextArea questionLbl;
 
     @FXML
-    private JFXRadioButton response1, response2, response3, response4;
+    private RadioButton response1, response2, response3, response4;
     // This list contain the question
     private List<Question> questions;
     // Save instance (Number Question => Response)
@@ -235,7 +230,7 @@ public class JavaQuizController implements Initializable {
         response2.setSelected(false);
         response3.setSelected(false);
         response4.setSelected(false);
-        ((JFXRadioButton) e.getSource()).setSelected(true);
+        ((RadioButton) e.getSource()).setSelected(true);
     }
 
     @FXML
