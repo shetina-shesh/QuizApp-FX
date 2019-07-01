@@ -41,9 +41,7 @@ public class LoginController {
             //stage.setResizable(false);
             stage.show();
             App.stage.close();
-            if (JavaQuizController.errorCode != null){
-                stage.close();
-            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

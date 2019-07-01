@@ -113,15 +113,13 @@ public class JavaQuizController implements Initializable {
         try {
             String answer = connection.receiveString();
             if (answer.equals("/e")){
-                errorCode = connection.receiveString();
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Error.fxml"));
-                Parent root = (Parent) loader.load();
-                Stage stage = new Stage();
-                stage.setResizable(false);
-                stage.setScene(new Scene(root));
-                stage.setResizable(false);
-                stage.show();
-                return;
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+                alert.setTitle("Ошибка");
+                alert.setHeaderText(null);
+                alert.setContentText("Время доступа к файлу истекло");
+
+                alert.showAndWait();
             }
             else {
                 questions = new QuestionLoader().getQuestion(connection.receiveFile());

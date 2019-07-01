@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Server extends Application {
+
+    public static Stage serverStage;
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/views/Server.fxml"));
@@ -16,6 +18,7 @@ public class Server extends Application {
         stage.setScene(scene);
         stage.initStyle(StageStyle.DECORATED);
         stage.setTitle("Server");
+        serverStage = stage;
         //stage.setResizable(false);
         stage.show();
     }

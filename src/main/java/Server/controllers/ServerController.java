@@ -46,7 +46,7 @@ public class ServerController implements Initializable, Runnable{
 
     Thread run, listen;
     public void clearConsole(ActionEvent actionEvent) {
-        //console.clear();
+        System.exit(0);
     }
 
     public void showFileSelectionDialog(ActionEvent actionEvent) {
@@ -73,13 +73,6 @@ public class ServerController implements Initializable, Runnable{
         run.start();
     }
 
-    // debug
-    public void initDebugVars(){
-        startHours.setText("15");
-        startMins.setText("0");
-        endHours.setText("23");
-        endMins.setText("59");
-    }
 
     @Override
     public void run() {
